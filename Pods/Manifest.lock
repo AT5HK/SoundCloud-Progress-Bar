@@ -1,0 +1,10 @@
+PODS:
+  - SCWaveformView (2.0.6)
+
+DEPENDENCIES:
+  - SCWaveformView
+
+SPEC CHECKSUMS:
+  SCWaveformView: 78b3503675aafcdaf9c283d68cb45c9fc735af87
+
+COCOAPODS: 0.37.2

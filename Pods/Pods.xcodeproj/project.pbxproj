@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B0F94B49E18E4FB96797E46 /* SCScrollableWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C772931074D5ED84D10FECB2 /* SCScrollableWaveformView.h */; };
+		4376B3E04A872FF77E736580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307588099669CAFBC8278C5C /* Foundation.framework */; };
+		5A33C2978D123E128D865675 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A87483CD4AB08F54A7DF4F /* SCWaveformView.h */; };
+		674EF5E760A91A6C6DFDF85F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8A1785AFBD277D5010645 /* Pods-dummy.m */; };
+		8616D1E56399DFC9FF821AED /* SCWaveformCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5227472632B91F050E61D63B /* SCWaveformCache.m */; };
+		B69A598E0A9DDC36437426D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307588099669CAFBC8278C5C /* Foundation.framework */; };
+		B89E02BA37C7363F4CF1E416 /* Pods-SCWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68235CEFFC1770640E0E89C0 /* Pods-SCWaveformView-dummy.m */; };
+		DBE60CE0FD1D934D86954F2E /* SCScrollableWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDE373B3CEDEA17C9CB26D /* SCScrollableWaveformView.m */; };
+		E9D1B532F2CDB71AFA3CF03D /* SCWaveformCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C4DE3939B9A82E1F752C8D /* SCWaveformCache.h */; };
+		F7ECABD2D2BA9450CAB074D6 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 726DF63CBD6C830D6D0E8275 /* SCWaveformView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDFD71134F6C512067FBF7D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 115249158AED3A11B0469C2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CE743A27B58370C8119A590;
+			remoteInfo = "Pods-SCWaveformView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19AC4E72A7AE9660F3D9ED27 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D19951D50BE682689FAD432 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2626F2AF5B73F04217564C55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		307588099669CAFBC8278C5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35FBCE79F6ECD1EF295E0182 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		36DDE373B3CEDEA17C9CB26D /* SCScrollableWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCScrollableWaveformView.m; path = Sources/SCScrollableWaveformView.m; sourceTree = "<group>"; };
+		4C5D6023CC7C575DA440F503 /* Pods-SCWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCWaveformView.xcconfig"; sourceTree = "<group>"; };
+		50BEFDE9EA564614F52D8044 /* libPods-SCWaveformView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SCWaveformView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5227472632B91F050E61D63B /* SCWaveformCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCWaveformCache.m; path = Sources/SCWaveformCache.m; sourceTree = "<group>"; };
+		649850111F8FC50592F9B518 /* Pods-SCWaveformView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCWaveformView-Private.xcconfig"; sourceTree = "<group>"; };
+		660EFDB453CCA1A1A0224B53 /* Pods-SCWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCWaveformView-prefix.pch"; sourceTree = "<group>"; };
+		68235CEFFC1770640E0E89C0 /* Pods-SCWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCWaveformView-dummy.m"; sourceTree = "<group>"; };
+		693973F451D659A4954EC653 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		70A87483CD4AB08F54A7DF4F /* SCWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCWaveformView.h; path = Sources/SCWaveformView.h; sourceTree = "<group>"; };
+		726DF63CBD6C830D6D0E8275 /* SCWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCWaveformView.m; path = Sources/SCWaveformView.m; sourceTree = "<group>"; };
+		A869110E09915D253A23F6DB /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		B56A0C56A313E28FEB13F133 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
+		BCFCBB75961F6C1984DA35FC /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		C772931074D5ED84D10FECB2 /* SCScrollableWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCScrollableWaveformView.h; path = Sources/SCScrollableWaveformView.h; sourceTree = "<group>"; };
+		D6C4DE3939B9A82E1F752C8D /* SCWaveformCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCWaveformCache.h; path = Sources/SCWaveformCache.h; sourceTree = "<group>"; };
+		E5B8A1785AFBD277D5010645 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		566A40D94933E16BEC052423 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69A598E0A9DDC36437426D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6034C5A1CA60F843CBFF841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4376B3E04A872FF77E736580 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17E6CF2995C8DF337381E303 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D83BECDE73231A7BCCBD2D03 /* SCWaveformView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B32187FF5B179780BEB4AE6 = {
+			isa = PBXGroup;
+			children = (
+				B56A0C56A313E28FEB13F133 /* Podfile */,
+				57241994F7A1A32F85093CC2 /* Frameworks */,
+				17E6CF2995C8DF337381E303 /* Pods */,
+				6CD18DA115775882B0412D10 /* Products */,
+				8506ECF85D353E4B2CF7913C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		57241994F7A1A32F85093CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9575B22D7E22299D17C2C6F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CD18DA115775882B0412D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D19951D50BE682689FAD432 /* libPods.a */,
+				50BEFDE9EA564614F52D8044 /* libPods-SCWaveformView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8506ECF85D353E4B2CF7913C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B798D2D8C417C9AE4CE4E7E8 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9220904989CB0FC74CDEE22B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C5D6023CC7C575DA440F503 /* Pods-SCWaveformView.xcconfig */,
+				649850111F8FC50592F9B518 /* Pods-SCWaveformView-Private.xcconfig */,
+				68235CEFFC1770640E0E89C0 /* Pods-SCWaveformView-dummy.m */,
+				660EFDB453CCA1A1A0224B53 /* Pods-SCWaveformView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SCWaveformView";
+			sourceTree = "<group>";
+		};
+		B798D2D8C417C9AE4CE4E7E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35FBCE79F6ECD1EF295E0182 /* Pods-acknowledgements.markdown */,
+				19AC4E72A7AE9660F3D9ED27 /* Pods-acknowledgements.plist */,
+				E5B8A1785AFBD277D5010645 /* Pods-dummy.m */,
+				BCFCBB75961F6C1984DA35FC /* Pods-environment.h */,
+				A869110E09915D253A23F6DB /* Pods-resources.sh */,
+				2626F2AF5B73F04217564C55 /* Pods.debug.xcconfig */,
+				693973F451D659A4954EC653 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		C9575B22D7E22299D17C2C6F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				307588099669CAFBC8278C5C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D83BECDE73231A7BCCBD2D03 /* SCWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				C772931074D5ED84D10FECB2 /* SCScrollableWaveformView.h */,
+				36DDE373B3CEDEA17C9CB26D /* SCScrollableWaveformView.m */,
+				D6C4DE3939B9A82E1F752C8D /* SCWaveformCache.h */,
+				5227472632B91F050E61D63B /* SCWaveformCache.m */,
+				70A87483CD4AB08F54A7DF4F /* SCWaveformView.h */,
+				726DF63CBD6C830D6D0E8275 /* SCWaveformView.m */,
+				9220904989CB0FC74CDEE22B /* Support Files */,
+			);
+			path = SCWaveformView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD23F3EED8259382B2F87450 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0F94B49E18E4FB96797E46 /* SCScrollableWaveformView.h in Headers */,
+				E9D1B532F2CDB71AFA3CF03D /* SCWaveformCache.h in Headers */,
+				5A33C2978D123E128D865675 /* SCWaveformView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2CE743A27B58370C8119A590 /* Pods-SCWaveformView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC54ACBFDA2F4CD17F8D4E26 /* Build configuration list for PBXNativeTarget "Pods-SCWaveformView" */;
+			buildPhases = (
+				3EDD96CB4B1F260AB079CF86 /* Sources */,
+				B6034C5A1CA60F843CBFF841 /* Frameworks */,
+				CD23F3EED8259382B2F87450 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SCWaveformView";
+			productName = "Pods-SCWaveformView";
+			productReference = 50BEFDE9EA564614F52D8044 /* libPods-SCWaveformView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F857627786FA890BB080B73D /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B333E3C7515A4C7263E3322 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				DCCC16025659401C942C2312 /* Sources */,
+				566A40D94933E16BEC052423 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B02D3807B10B09A8D108400A /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 1D19951D50BE682689FAD432 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		115249158AED3A11B0469C2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 17BAFC3716A311A2D3E9EA4A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B32187FF5B179780BEB4AE6;
+			productRefGroup = 6CD18DA115775882B0412D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F857627786FA890BB080B73D /* Pods */,
+				2CE743A27B58370C8119A590 /* Pods-SCWaveformView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EDD96CB4B1F260AB079CF86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B89E02BA37C7363F4CF1E416 /* Pods-SCWaveformView-dummy.m in Sources */,
+				DBE60CE0FD1D934D86954F2E /* SCScrollableWaveformView.m in Sources */,
+				8616D1E56399DFC9FF821AED /* SCWaveformCache.m in Sources */,
+				F7ECABD2D2BA9450CAB074D6 /* SCWaveformView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCCC16025659401C942C2312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				674EF5E760A91A6C6DFDF85F /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B02D3807B10B09A8D108400A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SCWaveformView";
+			target = 2CE743A27B58370C8119A590 /* Pods-SCWaveformView */;
+			targetProxy = DDFD71134F6C512067FBF7D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23779DFC915ED52A6A59CED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649850111F8FC50592F9B518 /* Pods-SCWaveformView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SCWaveformView/Pods-SCWaveformView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		481B268713AA329DF5112C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693973F451D659A4954EC653 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4F9A24BB8E199EFE4C0FAD5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89F9CF2316105B35BD6669E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9EAF9430CF651D11E23022A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2626F2AF5B73F04217564C55 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D9B9965D5EA399C63C1A0FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 649850111F8FC50592F9B518 /* Pods-SCWaveformView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SCWaveformView/Pods-SCWaveformView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B333E3C7515A4C7263E3322 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EAF9430CF651D11E23022A2 /* Debug */,
+				481B268713AA329DF5112C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17BAFC3716A311A2D3E9EA4A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F9CF2316105B35BD6669E6 /* Debug */,
+				4F9A24BB8E199EFE4C0FAD5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC54ACBFDA2F4CD17F8D4E26 /* Build configuration list for PBXNativeTarget "Pods-SCWaveformView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B9965D5EA399C63C1A0FD3 /* Debug */,
+				23779DFC915ED52A6A59CED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 115249158AED3A11B0469C2B /* Project object */;
+}
