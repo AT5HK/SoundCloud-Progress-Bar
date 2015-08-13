@@ -10,52 +10,80 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var progressView: UIProgressView!
 
     var scrollableWaveformView = SCScrollableWaveformView()
-//    var scrollableWaveformView = SCScrollableWaveformView()
-    var player = AVPlayer()
+    var player = AVAudioPlayer()
+    var timer = NSTimer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollableWaveformView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100)
         scrollableWaveformView.center = view.center
         
-        let path = NSBundle.mainBundle().pathForResource("Zatar", ofType:"mp3")
-        let asset = AVURLAsset.assetWithURL(NSURL(fileURLWithPath: path!)) as! AVAsset
-        let playerItem = AVPlayerItem(asset: asset)
+        let session = NSURLSession.sharedSession()
         
-        player = AVPlayer(playerItem: playerItem)
-        player.rate = 1
-        //.685
-        self.scrollableWaveformView.waveformView.precision = 1;
-        self.scrollableWaveformView.waveformView.lineWidthRatio = 1;
-        self.scrollableWaveformView.waveformView.normalColor = UIColor.grayColor();
-        self.scrollableWaveformView.waveformView.channelsPadding = 10;
-        self.scrollableWaveformView.waveformView.progressColor = UIColor.orangeColor();
-
+        let task = session.downloadTaskWithURL((NSURL(string: "https://p.scdn.co/mp3-preview/cb96e21d8c98fea5ad7ae0966da17e5a275af260")!), completionHandler: { (location, response, error) -> Void in
+            
+            
+            
+            let path = location.path!.stringByAppendingString(".mp3")
+            let newurl = NSURL(fileURLWithPath: path)!
+            let asset = AVURLAsset(URL: newurl, options: nil)
+            NSFileManager.defaultManager().moveItemAtURL(location, toURL: newurl, error: nil)
+            println("duration of asset: \(asset.duration.value)")
+            
+            
+            self.player = AVAudioPlayer(contentsOfURL: asset.URL, error: nil)
+            
+            
+                //.685
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.scrollableWaveformView.waveformView.precision = 1;
+                self.scrollableWaveformView.waveformView.lineWidthRatio = 1;
+                self.scrollableWaveformView.waveformView.normalColor = UIColor.grayColor();
+                self.scrollableWaveformView.waveformView.channelsPadding = 10;
+                self.scrollableWaveformView.waveformView.progressColor = UIColor.orangeColor();
+                
+                
+                self.scrollableWaveformView.alpha = 0.8;
+                
+                
+                self.scrollableWaveformView.waveformView.asset = asset;
+                
+                let progressTime = CMTimeMakeWithSeconds(
+                    1.0 * CMTimeGetSeconds(self.scrollableWaveformView.waveformView.asset.duration),
+                    self.scrollableWaveformView.waveformView.asset.duration.timescale)
+                
+                self.scrollableWaveformView.waveformView.timeRange =  CMTimeRangeMake(CMTimeMakeWithSeconds(0, 1), progressTime);
+                
+                self.view.addSubview(self.scrollableWaveformView)
+                
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
+                
+                self.scrollableWaveformView.contentOffset = CGPoint(x: 0, y: 0)
+                
+            })
+            self.player.play()
+        })
+        task.resume()
         
-        self.scrollableWaveformView.alpha = 0.8;
         
-        self.scrollableWaveformView.waveformView.asset = asset;
+        
+    }
     
-        
-        let progressTime = CMTimeMakeWithSeconds(
-            1.0 * CMTimeGetSeconds(self.scrollableWaveformView.waveformView.asset.duration),
-            self.scrollableWaveformView.waveformView.asset.duration.timescale)
-
-//        let progressTime = self.scrollableWaveformView.waveformView.asset.duration * 0.5
-        
-        self.scrollableWaveformView.waveformView.timeRange =  CMTimeRangeMake(CMTimeMakeWithSeconds(0, 10000), progressTime);
-        
-        println("waveForm frame \(scrollableWaveformView.waveformView.frame)")
-        self.view.addSubview(self.scrollableWaveformView)
-        player.play()
-        
-        player.addPeriodicTimeObserverForInterval(CMTimeMake(1, 60), queue: dispatch_get_main_queue(), usingBlock: { (time) -> Void in
-            self.scrollableWaveformView.waveformView.progressTime = time;
+    //MARK - helper methods
+    
+    func updateProgress() {
+        var time = player.currentTime
+        var duration = player.duration
+//        println("update progress called \(time/duration)")
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.scrollableWaveformView.waveformView.progressTime = CMTimeMakeWithSeconds(time/duration, 1)
+            println("\(self.scrollableWaveformView.waveformView.progressTime)")
+            self.progressView.progress = Float(time/duration)
         })
         
-        scrollableWaveformView.contentOffset = CGPoint(x: 0, y: 0)
     }
 
 }
