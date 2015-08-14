@@ -39,10 +39,10 @@ class ViewController: UIViewController {
             
                 //.685
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.scrollableWaveformView.waveformView.precision = 1;
-                self.scrollableWaveformView.waveformView.lineWidthRatio = 1;
+                self.scrollableWaveformView.waveformView.precision = 0.2;
+                self.scrollableWaveformView.waveformView.lineWidthRatio = 0.78;
                 self.scrollableWaveformView.waveformView.normalColor = UIColor.grayColor();
-                self.scrollableWaveformView.waveformView.channelsPadding = 10;
+                self.scrollableWaveformView.waveformView.channelsPadding = 1;
                 self.scrollableWaveformView.waveformView.progressColor = UIColor.orangeColor();
                 
                 
@@ -55,11 +55,11 @@ class ViewController: UIViewController {
                     1.0 * CMTimeGetSeconds(self.scrollableWaveformView.waveformView.asset.duration),
                     self.scrollableWaveformView.waveformView.asset.duration.timescale)
                 
-                self.scrollableWaveformView.waveformView.timeRange =  CMTimeRangeMake(CMTimeMakeWithSeconds(0, 1), progressTime);
+                self.scrollableWaveformView.waveformView.timeRange = CMTimeRangeMake(CMTimeMakeWithSeconds(0, 1), progressTime); //change progress time to change how long track is
                 
                 self.view.addSubview(self.scrollableWaveformView)
                 
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
                 
                 self.scrollableWaveformView.contentOffset = CGPoint(x: 0, y: 0)
                 
@@ -77,10 +77,14 @@ class ViewController: UIViewController {
     func updateProgress() {
         var time = player.currentTime
         var duration = player.duration
-//        println("update progress called \(time/duration)")
+        var songCurrentTime = CMTimeMakeWithSeconds(Float64(time), Int32(duration))
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.scrollableWaveformView.waveformView.progressTime = CMTimeMakeWithSeconds(time/duration, 1)
-            println("\(self.scrollableWaveformView.waveformView.progressTime)")
+            
+            self.scrollableWaveformView.waveformView.progressTime = songCurrentTime
+            
+            println("songs current time from var: \(songCurrentTime.value)")
+            println("songs current time from scrollview: \(self.scrollableWaveformView.waveformView.progressTime.value)")
+            
             self.progressView.progress = Float(time/duration)
         })
         
