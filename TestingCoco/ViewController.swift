@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let task = session.downloadTaskWithURL((NSURL(string: "https://p.scdn.co/mp3-preview/cb96e21d8c98fea5ad7ae0966da17e5a275af260")!), completionHandler: { (location, response, error) -> Void in
             
             
-            
+            //move file path so track doesn't get deleted after block
             let path = location.path!.stringByAppendingString(".mp3")
             let newurl = NSURL(fileURLWithPath: path)!
             let asset = AVURLAsset(URL: newurl, options: nil)
@@ -36,11 +36,10 @@ class ViewController: UIViewController {
             
             self.player = AVAudioPlayer(contentsOfURL: asset.URL, error: nil)
             
-            
                 //.685
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.scrollableWaveformView.waveformView.precision = 0.2;
-                self.scrollableWaveformView.waveformView.lineWidthRatio = 0.78;
+                self.scrollableWaveformView.waveformView.lineWidthRatio = 0.65;
                 self.scrollableWaveformView.waveformView.normalColor = UIColor.grayColor();
                 self.scrollableWaveformView.waveformView.channelsPadding = 1;
                 self.scrollableWaveformView.waveformView.progressColor = UIColor.orangeColor();
@@ -59,7 +58,8 @@ class ViewController: UIViewController {
                 
                 self.view.addSubview(self.scrollableWaveformView)
                 
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
+                //call timer to update progress bar
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateProgress", userInfo: nil, repeats: true)
                 
                 self.scrollableWaveformView.contentOffset = CGPoint(x: 0, y: 0)
                 
@@ -67,9 +67,7 @@ class ViewController: UIViewController {
             self.player.play()
         })
         task.resume()
-        
-        
-        
+
     }
     
     //MARK - helper methods
@@ -78,17 +76,10 @@ class ViewController: UIViewController {
         var time = player.currentTime
         var duration = player.duration
         var songCurrentTime = CMTimeMakeWithSeconds(Float64(time), Int32(duration))
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            self.scrollableWaveformView.waveformView.progressTime = songCurrentTime
-            
-            println("songs current time from var: \(songCurrentTime.value)")
-            println("songs current time from scrollview: \(self.scrollableWaveformView.waveformView.progressTime.value)")
-            
-            self.progressView.progress = Float(time/duration)
-        })
-        
-    }
+        self.scrollableWaveformView.waveformView.progressTime = songCurrentTime
+
+        }
 
 }
 
